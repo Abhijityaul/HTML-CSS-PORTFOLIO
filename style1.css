@@ -1,0 +1,222 @@
+*{
+        margin: 0;
+        padding: 0;
+}
+html, body{
+        height: 100%;
+        width: 100%;
+        background: #b6ded7;
+}
+.main{
+        height: 100%;
+        width: 100%;
+        position: relative;
+}
+.nav{
+        height: 60px;
+        width: 100%;
+        background-color: #b5edf5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* position: fixed; */
+        z-index: 1;        
+}
+
+.nav > h2{
+        margin: 0 10px;
+}
+.right{
+        display: flex;
+        gap: 20px;
+
+}
+
+.right >  li{
+        list-style: none;
+        line-height: 2;
+        
+}
+.right >  li >a{
+   color: inherit;
+   text-decoration: inherit;
+
+      
+}
+button {
+        background: black;
+        color: white;
+      font-family: cursive;
+        border-radius: 5px;
+        padding: 2px 10px;
+        cursor: pointer;
+
+}
+button > a{
+        color: inherit;
+    font-size: initial;
+    text-decoration: inherit;
+}
+.content{
+height: calc(100% - 62px);
+width: 100%;
+display: flex;
+flex-direction: row;
+position: relative;
+}
+.content >.left>h1{
+        font-family: cursive;
+        font-size: x-large;
+        padding: 4vw;
+     
+}
+.left{
+        height: 100%;
+        width: 50%;
+        /* background-color: crimson; */
+
+}
+.left > button{
+        margin-left: 4vw;
+        padding: 1.3vw 2.3vw;
+        background-color:royalblue;
+        border-radius: 5px;
+        font-weight: 700;
+
+}
+.left >h1{
+        font-size: 4vw;
+
+}
+
+
+.left>h1>span{
+        color:royalblue;
+}
+
+.left>p{
+
+        font-size: 1.2vw;
+        font-weight: 600;
+        color: #666;
+        width: 80%;
+        margin-top: 0vw;
+        margin-bottom: 4vw;
+        margin-left: 4vw;
+  
+      
+}
+.imgright{
+        height: 100%;
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color:royalblue ; */
+}
+.imgright>img{
+        width: 77%;
+        height: 100%;
+}
+
+.img1 > img{
+
+    height: 70px;
+    position: absolute;
+    top: 225px;
+    right: 61px;
+
+    animation: Rotate 5s ease-in infinite;
+
+}  
+
+/* Media Queries*/
+
+@media (max-width:600px){
+
+         .nav>h2{
+                display: none;
+        }
+        .nav{
+                justify-content: space-around;
+                align-items: center;
+        } 
+        .imgright>img{
+                width:280px;
+               
+           }
+        
+}
+@media(max-width:800px){
+        .content{
+                justify-content: center;
+                display: flex;
+                flex-direction: column-reverse;
+                width: 100%;
+                align-items: center;
+         }
+         .img1 > img{
+
+                height: 70px;
+                position: absolute;
+                top: 215px;
+    right: 292px;
+                animation: Rotate 5s ease-in infinite;
+            
+        }  
+
+}
+
+@media  (max-width: 1200px) and (min-width: 800px){
+        .content{
+                width: 100%;
+                height: 84%;
+         }
+
+         .img1 > img{
+
+                height: 70px;
+                position: absolute;
+                top: 494px;
+                right: 221px;
+            
+                animation: Rotate 5s ease-in infinite;
+            
+        }  
+            
+
+
+
+}
+
+/* Only for rounded logo */
+
+@media  (max-width: 1550px) and (min-width: 800px){
+        .content{
+                width: 100%;
+                height: 84%;
+         }
+
+         .img1 > img{
+
+                height: 70px;
+                position: absolute;
+                top: 494px;
+                right: 221px;
+            
+                
+                animation: Rotate 3s cubic-bezier(0.62, -0.01, 0.78, 1.06) infinite;
+        }
+        }  
+
+
+
+@keyframes Rotate{
+        0%{
+                transform: rotate(0deg);
+        }
+        100%{
+                transform: rotate(360deg);
+        }
+}
+
